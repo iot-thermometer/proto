@@ -1,0 +1,30 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+
+
+message UpdateDeviceRequest {
+  string name = 1;
+  int32 readingInterval = 2;
+  int32 pushInterval = 3;
+}
+
+message UpdateDeviceResponse {
+  oneof result {
+    UpdateDeviceDto success = 1;
+    UpdateDeviceErrorDto failed = 2;
+  }
+}
+
+message UpdateDeviceDto {
+
+}
+
+message UpdateDeviceErrorDto {
+  repeated UpdateDeviceErrorCodeDto codes = 1;
+}
+
+enum UpdateDeviceErrorCodeDto {
+  UPDATE_DEVICE_ERROR_CODE_UNSPECIFIED = 0;
+}

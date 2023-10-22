@@ -1,0 +1,28 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+
+
+message GetReadingsRequest {
+
+}
+
+message GetReadingsResponse {
+  oneof result {
+    GetReadingsDto success = 1;
+    GetReadingsErrorDto failed = 2;
+  }
+}
+
+message GetReadingsDto {
+
+}
+
+message GetReadingsErrorDto {
+  repeated GetReadingsErrorCodeDto codes = 1;
+}
+
+enum GetReadingsErrorCodeDto {
+  GET_READINGS_ERROR_CODE_UNSPECIFIED = 0;
+}

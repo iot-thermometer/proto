@@ -1,0 +1,30 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+
+
+message AddDeviceRequest {
+  string name = 1;
+  int32 readingInterval = 2;
+  int32 pushInterval = 3;
+}
+
+message AddDeviceResponse {
+  oneof result {
+    AddDeviceDto success = 1;
+    AddDeviceErrorDto failed = 2;
+  }
+}
+
+message AddDeviceDto {
+
+}
+
+message AddDeviceErrorDto {
+  repeated AddDeviceErrorCodeDto codes = 1;
+}
+
+enum AddDeviceErrorCodeDto {
+  ADD_DEVICE_ERROR_CODE_UNSPECIFIED = 0;
+}

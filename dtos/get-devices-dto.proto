@@ -1,0 +1,28 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+
+
+message GetDevicesRequest {
+
+}
+
+message GetDevicesResponse {
+  oneof result {
+    GetDevicesDto success = 1;
+    GetDevicesErrorDto failed = 2;
+  }
+}
+
+message GetDevicesDto {
+
+}
+
+message GetDevicesErrorDto {
+  repeated GetDevicesErrorCodeDto codes = 1;
+}
+
+enum GetDevicesErrorCodeDto {
+  GET_DEVICES_ERROR_CODE_UNSPECIFIED = 0;
+}

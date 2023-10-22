@@ -1,0 +1,28 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+
+
+message GetConfigRequest {
+
+}
+
+message GetConfigResponse {
+  oneof result {
+    GetConfigDto success = 1;
+    GetConfigErrorDto failed = 2;
+  }
+}
+
+message GetConfigDto {
+
+}
+
+message GetConfigErrorDto {
+  repeated GetConfigErrorCodeDto codes = 1;
+}
+
+enum GetConfigErrorCodeDto {
+  GET_CONFIG_ERROR_CODE_UNSPECIFIED = 0;
+}

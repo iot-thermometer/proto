@@ -1,0 +1,29 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+
+
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message RegisterResponse {
+  oneof result {
+    RegisterDto success = 1;
+    RegisterErrorDto failed = 2;
+  }
+}
+
+message RegisterDto {
+  string token = 1;
+}
+
+message RegisterErrorDto {
+  repeated RegisterErrorCodeDto codes = 1;
+}
+
+enum RegisterErrorCodeDto {
+  REGISTER_ERROR_CODE_UNSPECIFIED = 0;
+}
