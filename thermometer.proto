@@ -3,13 +3,13 @@ option java_multiple_files = true;
 
 package com.thermometer.proto;
 
-import "get-config-dto.proto";
-import "login-dto.proto";
-import "register-dto.proto";
-import "get-devices-dto.proto";
-import "add-device-dto.proto";
-import "update-device-dto.proto";
-import "get-readings-dto.proto";
+import "dto/get-config-dto.proto";
+import "dto/login-dto.proto";
+import "dto/register-dto.proto";
+import "dto/get-devices-dto.proto";
+import "dto/add-device-dto.proto";
+import "dto/update-device-dto.proto";
+import "dto/get-readings-dto.proto";
 
 service ThermometerService {
   rpc Login (LoginRequest) returns (LoginResponse);
