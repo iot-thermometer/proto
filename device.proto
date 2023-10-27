@@ -1,7 +1,11 @@
+package com.thermometer.proto;
+option go_package = "github.com/iot-thermometer/server/gen";
+
 message Device {
-  required string name = 1;
-  required string recentlySeenAt = 2;
-  required string token = 3;
-  required string readingInterval = 4;
-  required string pushInterval = 5;
+  required int64 id = 1;
+  required string name = 2;
+  required string recentlySeenAt = 3;
+  required string token = 4;
+  required string readingInterval = 5;
+  required string pushInterval = 6;
 }

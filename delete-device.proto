@@ -7,9 +7,9 @@ option go_package = "github.com/iot-thermometer/server/gen";
 import "device.proto";
 
 message DeleteDeviceRequest {
-
+  int64 id = 1;
 }
 
 message DeleteDeviceResponse {
-  repeated Device devices = 1;
+
 }

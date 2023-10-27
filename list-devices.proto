@@ -7,7 +7,6 @@ option go_package = "github.com/iot-thermometer/server/gen";
 import "device.proto";
 
 message ListDevicesRequest {
-
 }
 
 message ListDevicesResponse {

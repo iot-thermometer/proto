@@ -7,7 +7,7 @@ option go_package = "github.com/iot-thermometer/server/gen";
 import "login.proto";
 import "register.proto";
 import "list-devices.proto";
-import "add-device.proto";
+import "create-device.proto";
 import "update-device.proto";
 import "delete-device.proto";
 import "list-readings.proto";
@@ -17,7 +17,7 @@ service ThermometerService {
   rpc Register (RegisterRequest) returns (RegisterResponse);
 
   rpc ListDevices (ListDevicesRequest) returns (ListDevicesResponse);
-  rpc AddDevice (AddDeviceRequest) returns (AddDeviceResponse);
+  rpc CreateDevice (CreateDeviceRequest) returns (CreateDeviceResponse);
   rpc UpdateDevice (UpdateDeviceRequest) returns (UpdateDeviceResponse);
   rpc DeleteDevice(DeleteDeviceRequest) returns (DeleteDeviceResponse);
 

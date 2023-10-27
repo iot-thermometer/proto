@@ -4,13 +4,15 @@ option java_multiple_files = true;
 package com.thermometer.proto;
 option go_package = "github.com/iot-thermometer/server/gen";
 
+import "device.proto";
 
 message UpdateDeviceRequest {
-  string name = 1;
-  int32 readingInterval = 2;
-  int32 pushInterval = 3;
+  int64 id = 1;
+  string name = 2;
+  int64 readingInterval = 3;
+  int64 pushInterval = 4;
 }
 
 message UpdateDeviceResponse {
-
+  Device device = 1;
 }

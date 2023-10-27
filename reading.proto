@@ -1,0 +1,11 @@
+package com.thermometer.proto;
+option go_package = "github.com/iot-thermometer/server/gen";
+
+message Reading {
+  required int64 id = 1;
+  required int64 deviceId = 2;
+  required float value = 3;
+  required string type = 4;
+  required int64 measuredAt = 5;
+  required int64 uploadedAt = 6;
+}
