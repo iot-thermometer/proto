@@ -4,23 +4,22 @@ option java_multiple_files = true;
 package com.thermometer.proto;
 option go_package = "github.com/iot-thermometer/server/gen";
 
-import "get-config-dto.proto";
-import "login-dto.proto";
-import "register-dto.proto";
-import "get-devices-dto.proto";
-import "add-device-dto.proto";
-import "update-device-dto.proto";
-import "get-readings-dto.proto";
+import "login.proto";
+import "register.proto";
+import "list-devices.proto";
+import "add-device.proto";
+import "update-device.proto";
+import "delete-device.proto";
+import "list-readings.proto";
 
 service ThermometerService {
   rpc Login (LoginRequest) returns (LoginResponse);
   rpc Register (RegisterRequest) returns (RegisterResponse);
 
-  rpc GetDevices (GetDevicesRequest) returns (GetDevicesResponse);
+  rpc ListDevices (ListDevicesRequest) returns (ListDevicesResponse);
   rpc AddDevice (AddDeviceRequest) returns (AddDeviceResponse);
   rpc UpdateDevice (UpdateDeviceRequest) returns (UpdateDeviceResponse);
+  rpc DeleteDevice(DeleteDeviceRequest) returns (DeleteDeviceResponse);
 
-  rpc GetReadings (GetReadingsRequest) returns (stream GetReadingsResponse);
-
-  rpc GetConfig (GetConfigRequest) returns (GetConfigResponse);
+  rpc ListReadings (ListReadingsRequest) returns (stream ListReadingsResponse);
 }

@@ -11,20 +11,5 @@ message LoginRequest {
 }
 
 message LoginResponse {
-  oneof result {
-    LoginDto success = 1;
-    LoginErrorDto failed = 2;
-  }
-}
-
-message LoginDto {
   string token = 1;
-}
-
-message LoginErrorDto {
-  repeated LoginErrorCodeDto codes = 1;
-}
-
-enum LoginErrorCodeDto {
-  LOGIN_ERROR_CODE_UNSPECIFIED = 0;
 }

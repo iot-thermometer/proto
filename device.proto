@@ -1,0 +1,7 @@
+message Device {
+  required string name = 1;
+  required string recentlySeenAt = 2;
+  required string token = 3;
+  required string readingInterval = 4;
+  required string pushInterval = 5;
+}

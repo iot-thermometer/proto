@@ -12,20 +12,5 @@ message UpdateDeviceRequest {
 }
 
 message UpdateDeviceResponse {
-  oneof result {
-    UpdateDeviceDto success = 1;
-    UpdateDeviceErrorDto failed = 2;
-  }
-}
 
-message UpdateDeviceDto {
-
-}
-
-message UpdateDeviceErrorDto {
-  repeated UpdateDeviceErrorCodeDto codes = 1;
-}
-
-enum UpdateDeviceErrorCodeDto {
-  UPDATE_DEVICE_ERROR_CODE_UNSPECIFIED = 0;
 }
