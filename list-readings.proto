@@ -4,11 +4,12 @@ option java_multiple_files = true;
 package com.thermometer.proto;
 option go_package = "github.com/iot-thermometer/server/gen";
 
+import "device.proto";
 
 message ListReadingsRequest {
-
+    int64 id = 1;
 }
 
 message ListReadingsResponse {
-
+    repeated Device devices = 1;
 }
