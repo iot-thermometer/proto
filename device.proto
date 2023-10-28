@@ -6,6 +6,6 @@ message Device {
   required string name = 2;
   required int64 recentlySeenAt = 3;
   required string token = 4;
-  required string readingInterval = 5;
-  required string pushInterval = 6;
+  required int64 readingInterval = 5;
+  required int64 pushInterval = 6;
 }
