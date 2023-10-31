@@ -6,6 +6,7 @@ message Reading {
   required int64 deviceId = 2;
   required float soilMoisture = 3;
   required float temperature = 4;
-  required int64 measuredAt = 5;
-  required int64 uploadedAt = 6;
+  required float other = 5;
+  required int64 measuredAt = 6;
+  required int64 uploadedAt = 7;
 }
