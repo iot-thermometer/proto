@@ -19,7 +19,7 @@ service ThermometerService {
   rpc ListDevices (ListDevicesRequest) returns (ListDevicesResponse);
   rpc CreateDevice (CreateDeviceRequest) returns (CreateDeviceResponse);
   rpc UpdateDevice (UpdateDeviceRequest) returns (UpdateDeviceResponse);
-  rpc DeleteDevice(DeleteDeviceRequest) returns (DeleteDeviceResponse);
+  rpc DeleteDevice (DeleteDeviceRequest) returns (DeleteDeviceResponse);
 
-  rpc ListReadings (ListReadingsRequest) returns (stream ListReadingsResponse);
+  rpc ListReadings (ListReadingsRequest) returns (ListReadingsResponse);
 }
