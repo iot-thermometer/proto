@@ -8,13 +8,12 @@ import "alert.proto";
 
 message CreateAlertRequest {
   string name = 1;
-  uint64 userID = 2;
-  uint64 deviceID = 3;
-  float soilMoistureMin = 4;
-  float soilMoistureMax = 5;
-  float temperatureMin = 6;
-  float temperatureMax = 7 ;
-  string pushToken = 8;
+  uint64 deviceID = 2;
+  float soilMoistureMin = 3;
+  float soilMoistureMax = 4;
+  float temperatureMin = 5;
+  float temperatureMax = 6;
+  string pushToken = 7;
 }
 
 message CreateAlertResponse {

@@ -9,13 +9,12 @@ import "alert.proto";
 message UpdateAlertRequest {
   uint64 id = 1;
   string name = 2;
-  uint64 userID = 3;
-  uint64 deviceID = 4;
-  float soilMoistureMin = 5;
-  float soilMoistureMax = 6;
-  float temperatureMin = 7;
-  float temperatureMax = 8;
-  string pushToken = 9;
+  uint64 deviceID = 3;
+  float soilMoistureMin = 4;
+  float soilMoistureMax = 5;
+  float temperatureMin = 6;
+  float temperatureMax = 7;
+  string pushToken = 8;
 }
 
 message UpdateAlertResponse {
