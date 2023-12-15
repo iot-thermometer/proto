@@ -1,0 +1,14 @@
+package com.thermometer.proto;
+option go_package = "github.com/iot-thermometer/server/gen";
+
+message Alert {
+  required uint64 id = 1;
+  required string name = 2;
+  required uint64 userID = 3;
+  required uint64 deviceID = 4;
+  required float soilMoistureMin = 5;
+  required float soilMoistureMax = 6;
+  required float temperatureMin = 7;
+  required float temperatureMax = 8;
+  required string pushToken = 9;
+}

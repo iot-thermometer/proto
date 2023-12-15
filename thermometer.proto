@@ -11,6 +11,10 @@ import "create-device.proto";
 import "update-device.proto";
 import "delete-device.proto";
 import "list-readings.proto";
+import "list-alerts.proto";
+import "create-alert.proto";
+import "update-alert.proto";
+import "delete-alert.proto";
 
 service ThermometerService {
   rpc Login (LoginRequest) returns (LoginResponse);
@@ -22,4 +26,9 @@ service ThermometerService {
   rpc DeleteDevice (DeleteDeviceRequest) returns (DeleteDeviceResponse);
 
   rpc ListReadings (ListReadingsRequest) returns (ListReadingsResponse);
+
+  rpc ListAlerts(ListAlertsRequest) returns (ListAlertsResponse);
+  rpc CreateAlert(CreateAlertRequest) returns (CreateAlertResponse);
+  rpc UpdateAlert(UpdateAlertRequest) returns (UpdateAlertResponse);
+  rpc DeleteAlert(DeleteAlertRequest) returns (DeleteAlertResponse);
 }

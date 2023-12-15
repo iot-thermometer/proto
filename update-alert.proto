@@ -1,0 +1,23 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+option go_package = "github.com/iot-thermometer/server/gen";
+
+import "alert.proto";
+
+message UpdateAlertRequest {
+  uint64 id = 1;
+  string name = 2;
+  uint64 userID = 3;
+  uint64 deviceID = 4;
+  float soilMoistureMin = 5;
+  float soilMoistureMax = 6;
+  float temperatureMin = 7;
+  float temperatureMax = 8;
+  string pushToken = 9;
+}
+
+message UpdateAlertResponse {
+  Alert alert = 1;
+}
