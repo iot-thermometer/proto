@@ -1,0 +1,13 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+option go_package = "github.com/iot-thermometer/server/gen";
+
+message AddPhoneRequest {
+  string pushID = 1;
+  string pushToken = 2;
+}
+
+message AddPhoneResponse {
+}
