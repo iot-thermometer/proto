@@ -14,7 +14,6 @@ message UpdateAlertRequest {
   float soilMoistureMax = 5;
   float temperatureMin = 6;
   float temperatureMax = 7;
-  string pushToken = 8;
 }
 
 message UpdateAlertResponse {

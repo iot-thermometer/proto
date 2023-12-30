@@ -10,5 +10,4 @@ message Alert {
   required float soilMoistureMax = 6;
   required float temperatureMin = 7;
   required float temperatureMax = 8;
-  required string pushToken = 9;
 }
