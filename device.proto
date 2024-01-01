@@ -4,7 +4,7 @@ option go_package = "github.com/iot-thermometer/server/gen";
 message Device {
   required uint64 id = 1;
   required string name = 2;
-  required int64 recentlySeenAt = 3;
+  optional int64 recentlySeenAt = 3;
   required string token = 4;
   required int64 readingInterval = 5;
   required int64 pushInterval = 6;
