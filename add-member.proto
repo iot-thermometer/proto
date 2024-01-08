@@ -4,9 +4,12 @@ option java_multiple_files = true;
 package com.thermometer.proto;
 option go_package = "github.com/iot-thermometer/server/gen";
 
+import "ownership-role.proto";
+
 message AddMemberRequest {
-  int64 userID = 1;
+  string email = 1;
   int64 deviceID = 2;
+  OwnershipRole role = 3;
 }
 
 message AddMemberResponse {

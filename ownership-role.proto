@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.thermometer.proto;
+option go_package = "github.com/iot-thermometer/server/gen";
+
+
+enum OwnershipRole {
+  Owner = 0;
+  Member = 1;
+}
