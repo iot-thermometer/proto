@@ -17,6 +17,9 @@ import "update-alert.proto";
 import "delete-alert.proto";
 import "add-phone.proto";
 import "remove-phone.proto";
+import "add-member.proto";
+import "list-members.proto";
+import "remove-member.proto";
 
 service ThermometerService {
   rpc Login (LoginRequest) returns (LoginResponse);
@@ -36,4 +39,8 @@ service ThermometerService {
 
   rpc AddPhone(AddPhoneRequest) returns (AddPhoneResponse);
   rpc RemovePhone(RemovePhoneRequest) returns (RemovePhoneResponse);
+
+  rpc AddMember(AddMemberRequest) returns (AddMemberResponse);
+  rpc ListMembers(ListMembersRequest) returns (ListMembersResponse);
+  rpc RemoveMember(RemoveMemberRequest) returns (RemoveMemberResponse);
 }
