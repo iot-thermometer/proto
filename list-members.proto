@@ -15,6 +15,7 @@ message Ownership {
   string email = 2;
   OwnershipRole role = 3;
   int64 deviceID = 4;
+  bool isMe = 5;
 }
 
 message ListMembersResponse {
